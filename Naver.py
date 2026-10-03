@@ -20,7 +20,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 SEARCH_URL = "https://search.naver.com/search.naver?ssc=tab.blog.all&sm=tab_jum&query=%EC%9B%85%ED%8C%8C%EC%9D%B4+%EC%88%99%EB%8C%80"
-START_DATE = "2025-06-30"
+START_DATE = "2024-12-01"
 END_DATE = "2026-09-15"
 SCROLL_IDLE_ROUNDS = 5
 REQUIRED_TEXT = "웅파이"
