@@ -8,7 +8,7 @@ import requests
 INPUT_DIR = Path("naver_results_2024-12-01_2026-09-15")
 OUTPUT_DIR = Path("categorize_needs_results")
 
-MODEL = "qwen3.5:27b"
+MODEL = "qwen2.5:7b"
 
 OUTPUT_DIR.mkdir(exist_ok=True)
 
@@ -166,8 +166,6 @@ def analyze_file(file_path):
 
                 rows.append({
                     "source_file": file_path.name,
-                    "review_id": review_index,
-                    "original_review": review,
                     "topic": item.get("topic", ""),
                     "evaluation": item.get(
                         "evaluation",
@@ -193,8 +191,6 @@ def analyze_file(file_path):
 
             rows.append({
                 "source_file": file_path.name,
-                "review_id": review_index,
-                "original_review": review,
                 "topic": "분석 실패",
                 "evaluation": "",
                 "evidence": "",
@@ -209,8 +205,6 @@ def save_csv(rows, output_path):
 
     fieldnames = [
         "source_file",
-        "review_id",
-        "original_review",
         "topic",
         "evaluation",
         "evidence",
