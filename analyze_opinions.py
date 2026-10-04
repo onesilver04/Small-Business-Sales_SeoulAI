@@ -4,10 +4,10 @@ import json
 from pathlib import Path
 
 
-INPUT_FILE = Path("keyword_results/all_reviews_keywords.csv")
+INPUT_FILE = Path("categorize_keyword_results/all_reviews_keywords.csv")
 OUTPUT_FILE = Path("keyword_results/opinion_summary.csv")
 
-MODEL = "qwen3:4b"
+MODEL = "qwen2.5:7b"
 
 
 # 분석할 표준 세부 주제
